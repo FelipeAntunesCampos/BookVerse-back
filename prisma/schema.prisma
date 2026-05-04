@@ -59,7 +59,7 @@ model Livro {
 // Personagens
 model Personagem {
     id           Int     @id @default(autoincrement())
-    livro_id     Int     @map("book_id")
+    livro_id     Int
     nome         String
     descricao_pt String
     descricao_en String
@@ -75,7 +75,7 @@ model Personagem {
 // Simulados (Quizzes)
 model Simulado {
     id          Int    @id @default(autoincrement())
-    livro_id    Int    @map("book_id")
+    livro_id    Int    
     pergunta_pt String
     pergunta_en String
 
