@@ -21,26 +21,26 @@ model Livro {
     descricao_pt String
     descricao_en String
 
-    enredo_pt String
-    enredo_en String
+    enredo_pt String?
+    enredo_en String?
 
     contexto_historico_pt String?
     contexto_historico_en String?
 
-    detalhes_autor_pt String
-    detalhes_autor_en String
+    detalhes_autor_pt String?
+    detalhes_autor_en String?
 
-    estilo_escrita_pt String
-    estilo_escrita_en String
+    estilo_escrita_pt String?
+    estilo_escrita_en String?
 
-    verossimilhanca_pt String
-    verossimilhanca_en String
+    verossimilhanca_pt String?
+    verossimilhanca_en String?
 
-    caracteristicas_literarias_pt String
-    caracteristicas_literarias_en String
+    caracteristicas_literarias_pt String?
+    caracteristicas_literarias_en String?
 
-    conclusao_pt String
-    conclusao_en String
+    conclusao_pt String?
+    conclusao_en String?
 
     video_url String?
     capa_url  String?
@@ -75,7 +75,7 @@ model Personagem {
 // Simulados (Quizzes)
 model Simulado {
     id          Int    @id @default(autoincrement())
-    livro_id    Int    
+    livro_id    Int
     pergunta_pt String
     pergunta_en String
 
