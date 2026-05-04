@@ -9,107 +9,133 @@ const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-    console.log('🌱 Resetando tabela exemplo...');
+    console.log('🌱 Resetando tabelas...');
 
-    await prisma.curiosity.deleteMany();
-    await prisma.quiz.deleteMany();
-    await prisma.character.deleteMany();
-    await prisma.books.deleteMany();
-    await prisma.user.deleteMany();
+    // Ordem de exclusão para evitar erros de foreign key
+    await prisma.curiosidade.deleteMany();
+    await prisma.simulado.deleteMany();
+    await prisma.personagem.deleteMany();
+    await prisma.livro.deleteMany();
+    await prisma.usuario.deleteMany();
 
     console.log('Iniciando seed de usuários...');
-    // Seed de Usuários
-    const user1 = await prisma.user.create({
+    const user1 = await prisma.usuario.create({
         data: {
-            name: 'xxxxx',
-            email: 'xxxx@email.com',
-            passwordHash: 'senha123', // DEVE SER SECRETA
+            nome: 'Admin',
+            email: 'admin@email.com',
+            senha_hash: 'senha123',
         },
     });
 
-    const user2 = await prisma.user.create({
+    const user2 = await prisma.usuario.create({
         data: {
-            name: 'Estudante Teste',
+            nome: 'Estudante Teste',
             email: 'aluno@email.com',
-            passwordHash: 'aluno123',
+            senha_hash: 'aluno123',
         },
     });
 
-    console.log('Iniciando seed da obra principal...');
-    // Seed de Vidas Secas
-    const vidasSecas = await prisma.books.create({
+    console.log('Iniciando seed do livro...');
+    const livro = await prisma.livro.create({
         data: {
-            title: 'Vidas Secas',
-            author: 'Graciliano Ramos',
-            genre: '',
-            year: '',
-            moviment: '',
-            description_pt: '',
-            description_en: '',
-            plot_pt: '',
-            plot_en: '',
-            era_pt: '',
-            era_en: '',
-            video_url: '',
-            image_url: '',
-
-            // personagens
-            characters: {
-                create: [
-                    {
-                        name: 'xxx',
-                        description_pt: '',
-                        description_en: '',
-                        role: '',
-                        image_url: '',
-                    },
-                ],
-            },
-
-            // quiz
-            quizzes: {
-                create: [
-                    {
-                        question_pt: '',
-                        question_en: '',
-                        optionA: '',
-                        optionB: '',
-                        optionC: '',
-                        optionD: '',
-                        optionA_en: '',
-                        optionB_en: '',
-                        optionC_en: '',
-                        optionD_en: '',
-                        correct_answer: '', // Ex: 'a'
-                        explanation_pt: '',
-                        explanation_en: '',
-                    },
-                ],
-            },
-
-            // Curiosidades
-            curiosities: {
-                create: [
-                    {
-                        category_pt: '',
-                        category_en: '',
-                        title_pt: '',
-                        title_en: '',
-                        content_pt: '',
-                        content_en: '',
-                    },
-                ],
-            },
+            titulo: 'Vidas Secas',
+            autor: 'Graciliano Ramos',
+            genero_pt: 'Romance Regionalista',
+            genero_en: 'Regionalist Fiction',
+            ano: 1938,
+            movimento_pt: 'Modernismo (Geração de 30)',
+            movimento_en: 'Modernism',
+            descricao_pt: 'A história de uma família de retirantes no sertão nordestino.',
+            descricao_en: 'The story of a family of migrants in the Brazilian Northeast.',
+            enredo_pt: 'Fabiano, Vitória e seus filhos lutam contra a seca e a opressão.',
+            enredo_en: 'Fabiano, Vitória and their children struggle against drought and oppression.',
+            detalhes_autor_pt: 'Graciliano Ramos é um dos maiores nomes da literatura brasileira.',
+            detalhes_autor_en: 'Graciliano Ramos is one of the greatest names in Brazilian literature.',
+            estilo_escrita_pt: 'Linguagem seca e direta, mimetizando a escassez do sertão.',
+            estilo_escrita_en: 'Dry and direct language, mimicking the desert scarcity.',
+            verossimilhanca_pt: 'Retrato fiel da realidade social do Nordeste.',
+            verossimilhanca_en: 'Faithful portrait of Northeast social reality.',
+            caracteristicas_literarias_pt: 'Determinismo biológico e crítica social.',
+            caracteristicas_literarias_en: 'Biological determinism and social criticism.',
+            conclusao_pt: 'Uma obra atemporal sobre a condição humana.',
+            conclusao_en: 'A timeless work about the human condition.',
         },
     });
 
-    console.log('Seed finalizado com sucesso!');
-    console.log(`Usuários criados: ${user1.email}, ${user2.email}`);
+    console.log('Iniciando seed de curiosidades...');
+    const curiosidade1 = await prisma.curiosidade.create({
+        data: {
+            livro_id: livro.id,
+            categoria_pt: 'Estilo',
+            categoria_en: 'Style',
+            titulo_pt: 'Capítulos Desconexos',
+            titulo_en: 'Disconnected Chapters',
+            conteudo_pt: 'O livro foi escrito de forma que os capítulos pudessem ser lidos em quase qualquer ordem.',
+            conteudo_en: 'The book was written so that chapters could be read in almost any order.',
+        },
+    });
+
+    const curiosidade2 = await prisma.curiosidade.create({
+        data: {
+            livro_id: livro.id,
+            categoria_pt: 'Personagem',
+            categoria_en: 'Character',
+            titulo_pt: 'Baleia',
+            titulo_en: 'Baleia',
+            conteudo_pt: 'A cadela Baleia é um dos personagens mais humanizados da obra.',
+            conteudo_en: 'The dog Baleia is one of the most humanized characters in the work.',
+        },
+    });
+
+    console.log('Iniciando seed de simulados (questões)...');
+    const questao1 = await prisma.simulado.create({
+        data: {
+            livro_id: livro.id,
+            pergunta_pt: 'Qual o nome da cadela da família?',
+            pergunta_en: 'What is the dog\'s name?',
+            opcao_a: 'Baleia',
+            opcao_b: 'Sereia',
+            opcao_c: 'Estrela',
+            opcao_d: 'Luna',
+            opcao_a_en: 'Baleia',
+            opcao_b_en: 'Sereia',
+            opcao_c_en: 'Estrela',
+            opcao_d_en: 'Luna',
+            resposta_correta: 'a',
+            explicacao_pt: 'Baleia é o nome da icônica cadela da família.',
+            explicacao_en: 'Baleia is the iconic family dog.',
+        },
+    });
+
+    const questao2 = await prisma.simulado.create({
+        data: {
+            livro_id: livro.id,
+            pergunta_pt: 'Quem é o protagonista da obra?',
+            pergunta_en: 'Who is the protagonist?',
+            opcao_a: 'Fabiano',
+            opcao_b: 'Seu Tomás',
+            opcao_c: 'Soldado Amarelo',
+            opcao_d: 'Menino mais novo',
+            opcao_a_en: 'Fabiano',
+            opcao_b_en: 'Seu Tomás',
+            opcao_c_en: 'Yellow Soldier',
+            opcao_d_en: 'Younger boy',
+            resposta_correta: 'a',
+            explicacao_pt: 'Fabiano é o pai e protagonista.',
+            explicacao_en: 'Fabiano is the father and protagonist.',
+        },
+    });
+
+    console.log('✅ Seed finalizado com sucesso!');
+    console.log(`Usuários: ${user1.email}, ${user2.email}`);
+    console.log(`Livro: ${livro.titulo} (ID: ${livro.id})`);
+    console.log(`Curiosidades criadas: 2`);
+    console.log(`Questões criadas para este livro: 2`);
 }
 
 main()
-    .catch((e) => {
-        console.error('❌ Erro no seed:', e);
+    .catch((error) => {
+        console.error('❌ Erro no seed:', error);
         process.exit(1);
     })
     .finally(async () => {

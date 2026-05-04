@@ -7,122 +7,125 @@ datasource db {
 }
 
 // Obras, livros
+model Livro {
+    id           Int    @id @default(autoincrement())
+    titulo       String
+    autor        String
+    genero_pt    String
+    genero_en    String
+    ano          Int
+    movimento_pt String
+    movimento_en String
 
-model Books {
-    id             Int     @id @default(autoincrement())
-    title          String
-    author         String
-    genre          String
-    year           Int
-    moviment       String
-    description_pt String
-    //descrição em português
-    description_en String
-    //descrição em inglês
-    plot_pt        String
-    // enredo em português
-    plot_en        String
-    // enredo em inglês
-    era_pt         String?
-    // contexto histórico em português
-    era_en         String?
-    // contexto histórico em inglês
-    videoURL       String?
-    imageURL       String?
+    // Descrições e Textos (Conteúdo Multilíngue)
+    descricao_pt String
+    descricao_en String
+
+    enredo_pt String
+    enredo_en String
+
+    contexto_historico_pt String?
+    contexto_historico_en String?
+
+    detalhes_autor_pt String
+    detalhes_autor_en String
+
+    estilo_escrita_pt String
+    estilo_escrita_en String
+
+    verossimilhanca_pt String
+    verossimilhanca_en String
+
+    caracteristicas_literarias_pt String
+    caracteristicas_literarias_en String
+
+    conclusao_pt String
+    conclusao_en String
+
+    video_url String?
+    capa_url  String?
 
     // RELACIONAMENTOS
+    personagens  Personagem[]
+    simulados    Simulado[]
+    curiosidades Curiosidade[]
 
-    characters  Character[]
-    quizzes     Quiz[]
-    curiosities Curiosity[]
 
-    createdAt DateTime @default(now()) @map("created_at")
+    criado_em DateTime @default(now()) @map("created_at")
 
-    @@map("books")
+    @@map("livros")
 }
 
 // Personagens
-
-model Character {
-    id             Int     @id @default(autoincrement())
-    bookId         Int
-    name           String
-    description_pt String
-    //descrição em português
-    description_en String
-    //descrição em inglês
-    role           String?
-    imageURL       String?
+model Personagem {
+    id           Int     @id @default(autoincrement())
+    livro_id     Int     @map("book_id")
+    nome         String
+    descricao_pt String
+    descricao_en String
+    papel        String? // Ex: Protagonista, Antagonista
+    imagem_url   String?
 
     // RELACIONAMENTOS
+    livro Livro @relation(fields: [livro_id], references: [id], onDelete: Cascade)
 
-    book Books @relation(fields: [bookId], references: [id], onDelete: Cascade)
-
-    @@map("characters")
+    @@map("personagens")
 }
 
-// Simulados
-model Quiz {
+// Simulados (Quizzes)
+model Simulado {
     id          Int    @id @default(autoincrement())
-    bookId      Int
-    question_pt String
-    //questão em português
-    question_en String
-    //questão em inglês
+    livro_id    Int    @map("book_id")
+    pergunta_pt String
+    pergunta_en String
 
     // Opções em português
-    optionA       String
-    optionB       String
-    optionC       String
-    optionD       String
-    // Opções em ingles
-    optionA_en    String
-    optionB_en    String
-    optionC_en    String
-    optionD_en    String
-    correct_answer String // resposta correta
+    opcao_a String
+    opcao_b String
+    opcao_c String
+    opcao_d String
 
-    // FeedBack pedagógico
-    explanation_pt String?
-    explanation_en String?
+    // Opções em inglês
+    opcao_a_en String
+    opcao_b_en String
+    opcao_c_en String
+    opcao_d_en String
+
+    resposta_correta String
+
+    // Feedback pedagógico
+    explicacao_pt String?
+    explicacao_en String?
 
     // RELACIONAMENTOS
+    livro Livro @relation(fields: [livro_id], references: [id], onDelete: Cascade)
 
-    book Books @relation(fields: [bookId], references: [id], onDelete: Cascade)
-
-    @@map("quizzes")
+    @@map("simulados")
 }
 
 // Dicas, Redação e Curiosidades
-model Curiosity {
-    id          Int    @id @default(autoincrement())
-    bookId      Int
-    category_pt String
-    //categoria em português
-    category_en String
-    //categoria em inglês
-    title_pt    String
-    //titulo em português
-    title_en    String
-    //titulo em inglês
-    content_pt  String
-    //conteúdo em português
-    content_en  String
-    //conteúdo em inglês
+model Curiosidade {
+    id           Int    @id @default(autoincrement())
+    livro_id     Int
+    categoria_pt String
+    categoria_en String
+    titulo_pt    String
+    titulo_en    String
+    conteudo_pt  String
+    conteudo_en  String
 
     // RELACIONAMENTOS
+    livro Livro @relation(fields: [livro_id], references: [id], onDelete: Cascade)
 
-    book Books @relation(fields: [bookId], references: [id], onDelete: Cascade)
-
-    @@map("curiosities")
+    @@map("curiosidades")
 }
 
-// usuarios
-model User {
-    id           Int    @id @default(autoincrement())
-    name         String
-    email        String @unique
-    passwordHash String
+// Usuários
+model Usuario {
+    id         Int    @id @default(autoincrement())
+    nome       String
+    email      String @unique
+    senha_hash String
 
-    @@map("users")
+    @@map("usuarios")
 }
