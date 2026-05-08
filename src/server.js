@@ -1,6 +1,6 @@
 import express from 'express';
 import 'dotenv/config';
-import exemplosRoutes from './routes/exemploRoute.js';
+import LivroRoute from './routes/LivroRoute.js';
 import PersonagemRoute from './routes/PersonagemRoute.js'
 
 const app = express();
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 // Rotas
-app.use('/api/exemplos', exemplosRoutes);
+app.use('/livros', LivroRoute);
 app.use('/personagem', PersonagemRoute);
 
 app.use((req, res) => {
