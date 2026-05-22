@@ -144,7 +144,7 @@ async function main() {
 
    const membroEquipe12 = await prisma.equipe.create({
        data: {
-           nome: 'Leticia Maria',
+           nome: 'Letícia Maria',
            objetivo: 'Desenvolvedora front-end.',
            curso: 'Desenvolvimento de Sistemas',
            fotoURL: 'https://i.ibb.co/yc9WSScY/leticia.png',
