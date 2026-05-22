@@ -4,6 +4,6 @@ import { obterBibliotecaCompleta } from '../controllers/IntegracaoController.js'
 const router = Router();
 
 // Rota de teste
-router.get('/teste-integracao', obterBibliotecaCompleta);
+router.get('/', obterBibliotecaCompleta);
 
 export default router;

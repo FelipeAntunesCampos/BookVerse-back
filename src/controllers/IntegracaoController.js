@@ -1,19 +1,30 @@
 export const obterBibliotecaCompleta = async (req, res) => {
     try {
-        console.log('--- INICIANDO BUSCA DA BIBLIOTECA ---');
-        console.log('Chave 1 existe?:', !!process.env.KEY_LIVRO_CAPITAES_DA_AREIA);
-        console.log('Chave 2 existe?:', !!process.env.KEY_LIVRO_O_GUARANI);
 
         const endpointsLivros = [
             {
                 nomeLivro: 'Capitães da Areia',
                 urlCompleta: 'https://readflow-m8o6.onrender.com/api/livros',
                 apiKey: process.env.KEY_LIVRO_CAPITAES_DA_AREIA,
+                tipoAuth: 'x-api-key',
             },
             {
                 nomeLivro: 'O Guarani',
                 urlCompleta: 'https://bookpedia-backend-4ab3.onrender.com/livros',
                 apiKey: process.env.KEY_LIVRO_O_GUARANI,
+                tipoAuth: 'x-api-key',
+            },
+            {
+                nomeLivro: 'Quartos de despejo',
+                urlCompleta: 'https://backend-projeto-integrador-rana.onrender.com/api/livro',
+                apiKey: process.env.KEY_LIVRO_QUARTOS_DESPEJO,
+                tipoAuth: 'x-api-key',
+            },
+            {
+                nomeLivro: 'Memórias Póstumas de Brás Cubas',
+                urlCompleta: 'https://projeto-clubyx.onrender.com/livros',
+                apiKey: process.env.KEY_LIVRO_MEMORIAS,
+                tipoAuth: 'x-api-key',
             },
         ];
 
@@ -55,19 +66,34 @@ export const obterBibliotecaCompleta = async (req, res) => {
                 const dadosBrutos = await resposta.json();
                 console.log(`[Índice ${index}] JSON convertido com sucesso para ${livro.nomeLivro}`);
 
-                // Garante que é um array para não quebrar o .map interno
+
                 const listaDeLivros = Array.isArray(dadosBrutos) ? dadosBrutos : [];
 
                 const dadosFormatados = listaDeLivros.map((item) => ({
                     titulo:
-                        item.titulo || item.title || item.tituloDoLivro || 'Título não informado',
-                    autor: item.autor || item.author || item.autores|| 'Autor não informado',
-                    capa_url: item.capa || item.image || item.capaURL|| null,
-                    ano: item.ano || item.year || 'N/A',
-                    genero_pt: item.genero_pt || item.genero || 'Gênero não informado',
-                    genero_en: item.genero_en || item.genre || 'Genre not informed',
+                        item.titulo ||
+                        item.title ||
+                        item.tituloDoLivro ||
+                        item.tituloPT ||
+                        'Título não informado',
+                    autor:
+                        item.autor ||
+                        item.author ||
+                        item.autores ||
+                        item.nome ||
+                        'Autor não informado',
+                    capa_url: item.capa || item.image || item.capaURL || item.foto || null,
+                    ano: item.ano || item.year || item.anoPublicacao || item.publicacao || 'N/A',
+                    genero_pt:
+                        item.genero_pt || item.genero || item.generoPT || 'Gênero não informado',
+                    genero_en:
+                        item.genero_en || item.genre || item.generoEN || 'Genre not informed',
                     enredo_pt: item.enredo_pt || item.resumo || 'Enredo não informado',
-                    enredo_en: item.enredo_en || item.description || 'Description not informed',
+                    enredo_en:
+                        item.enredo_en ||
+                        item.description ||
+                        item.resumoEn ||
+                        'Description not informed',
                 }));
 
                 return {
@@ -86,7 +112,6 @@ export const obterBibliotecaCompleta = async (req, res) => {
             }
         });
 
-        // Aguarda todas resolverem
         const bibliotecaCompleta = await Promise.all(promessas);
         console.log('--- PROCESSO CONCLUÍDO COM SUCESSO ---');
 

@@ -32,7 +32,7 @@ app.use("/simulados",ApiKey, simuladoRoutes);
 app.use('/curiosidades',ApiKey, CuriosidadeRoute);
 app.use('/membros',ApiKey, EquipeRoute);
 app.use('/usuarios', ApiKey, UsuarioRoute);
-app.use('/api', IntegracaoRoute);
+app.use('/integracao', ApiKey, IntegracaoRoute);
 app.use((req, res) => {
     res.status(404).json({ error: 'Rota não encontrada' });
 });
