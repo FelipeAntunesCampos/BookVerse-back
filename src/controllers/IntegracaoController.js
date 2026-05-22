@@ -69,7 +69,9 @@ export const obterBibliotecaCompleta = async (req, res) => {
 
                 const listaDeLivros = Array.isArray(dadosBrutos) ? dadosBrutos : [];
 
+
                 const dadosFormatados = listaDeLivros.map((item) => ({
+
                     titulo:
                         item.titulo ||
                         item.title ||
@@ -122,3 +124,4 @@ export const obterBibliotecaCompleta = async (req, res) => {
         return res.status(500).json({ erro: 'Erro crítico no servidor.', detalhe: error.message });
     }
 };
+
