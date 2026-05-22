@@ -43,7 +43,7 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Eletroeletrônica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/prJ4ZYD1/breno.png',
         },
     });
 
@@ -52,7 +52,7 @@ async function main() {
             nome: 'Felipe Campos',
             objetivo: 'Desenvolvedor back end, api, banco de dados e integração.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/q3szrgXf/campos.png',
         },
     });
 
@@ -62,7 +62,7 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Fabricação Mecânica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/kV9gkmP8/fahl.png',
         },
     });
 
@@ -71,17 +71,17 @@ async function main() {
             nome: 'Melissa Freitas',
             objetivo: 'Desenvolvedora front-end.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/Q7SsfWWN/melissa.png',
         },
     });
 
     const membroEquipe5 = await prisma.equipe.create({
         data: {
-            nome: 'Felipe Gabriel',
+            nome: 'Felipe Jardim',
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Eletroeletrônica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/G3fkn9Hm/jardim.png',
         },
     });
 
@@ -90,7 +90,7 @@ async function main() {
             nome: 'Gustavo Alves',
             objetivo: 'Desenvolvedor back end, api, banco de dados e integração.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/ynJJ1PKJ/alves.png',
         },
     });
 
@@ -100,16 +100,16 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Fabricação Mecânica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/jkDr1P8F/victor.png',
         },
     });
 
     const membroEquipe8 = await prisma.equipe.create({
         data: {
-            nome: 'Luana Folegatti',
+            nome: 'Luana Follegati',
             objetivo: 'Desenvolvedora front-end.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/YVCqk9H/luana.png',
         },
     });
 
@@ -119,7 +119,7 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Eletroeletrônica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/GhDz8nk/heloisa.png',
         },
     });
 
@@ -128,7 +128,7 @@ async function main() {
             nome: 'Isabela Duetes',
             objetivo: 'Desenvolvedora front-end.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/5g4G2t0b/duetes.png',
         },
     });
 
@@ -138,7 +138,7 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Fabricação Mecânica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/B2h7DvNY/maria.png',
         },
     });
 
@@ -147,7 +147,7 @@ async function main() {
             nome: 'Letícia Maria',
             objetivo: 'Desenvolvedora front-end.',
             curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/yc9WSScY/leticia.png',
         },
     });
 
@@ -157,7 +157,7 @@ async function main() {
             objetivo:
                 'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
             curso: 'Fabricação Mecânica',
-            fotoURL: '',
+            fotoURL: 'https://i.ibb.co/WW3hW1Sz/ana.png',
         },
     });
 
