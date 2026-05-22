@@ -59,9 +59,10 @@ export const obterBibliotecaCompleta = async (req, res) => {
                 const listaDeLivros = Array.isArray(dadosBrutos) ? dadosBrutos : [];
 
                 const dadosFormatados = listaDeLivros.map((item) => ({
-                    titulo: item.titulo || item.title || 'Título não informado',
-                    autor: item.autor || item.author || 'Autor não informado',
-                    capa_url: item.capa || item.image || null,
+                    titulo:
+                        item.titulo || item.title || item.tituloDoLivro || 'Título não informado',
+                    autor: item.autor || item.author || item.autores|| 'Autor não informado',
+                    capa_url: item.capa || item.image || item.capaURL|| null,
                     ano: item.ano || item.year || 'N/A',
                     genero_pt: item.genero_pt || item.genero || 'Gênero não informado',
                     genero_en: item.genero_en || item.genre || 'Genre not informed',
