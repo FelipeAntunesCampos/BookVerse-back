@@ -37,129 +37,19 @@ async function main() {
     });
 
     console.log('Iniciando seed da equipe...');
-    const membroEquipe1 = await prisma.equipe.create({
-        data: {
-            nome: 'Breno Belmonte',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Eletroeletrônica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe2 = await prisma.equipe.create({
-        data: {
-            nome: 'Felipe Campos',
-            objetivo: 'Desenvolvedor back end, api, banco de dados e integração.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe3 = await prisma.equipe.create({
-        data: {
-            nome: 'Rafael Fahl',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Fabricação Mecânica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe4 = await prisma.equipe.create({
-        data: {
-            nome: 'Melissa Freitas',
-            objetivo: 'Desenvolvedora front-end.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe5 = await prisma.equipe.create({
-        data: {
-            nome: 'Felipe Gabriel',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Eletroeletrônica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe6 = await prisma.equipe.create({
-        data: {
-            nome: 'Gustavo Alves',
-            objetivo: 'Desenvolvedor back end, api, banco de dados e integração.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe7 = await prisma.equipe.create({
-        data: {
-            nome: 'Victor Barbosa',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Fabricação Mecânica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe8 = await prisma.equipe.create({
-        data: {
-            nome: 'Luana Folegatti',
-            objetivo: 'Desenvolvedora front-end.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe9 = await prisma.equipe.create({
-        data: {
-            nome: 'Heloísa Stefanini',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Eletroeletrônica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe10 = await prisma.equipe.create({
-        data: {
-            nome: 'Isabela Duetes',
-            objetivo: 'Desenvolvedora front-end.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe11 = await prisma.equipe.create({
-        data: {
-            nome: 'Maria Luiza',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Fabricação Mecânica',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe12 = await prisma.equipe.create({
-        data: {
-            nome: 'Letícia Maria',
-            objetivo: 'Desenvolvedora front-end.',
-            curso: 'Desenvolvimento de Sistemas',
-            fotoURL: '',
-        },
-    });
-
-    const membroEquipe13 = await prisma.equipe.create({
-        data: {
-            nome: 'Ana Clara',
-            objetivo:
-                'Responsabilidade sobre dados do livro, extrair informações para conter no site.',
-            curso: 'Fabricação Mecânica',
-            fotoURL: '',
-        },
-    });
+    const membroEquipe1 = await prisma.equipe.create({ data: { nome: 'Breno Belmonte', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Eletroeletrônica', fotoURL: '' } });
+    const membroEquipe2 = await prisma.equipe.create({ data: { nome: 'Felipe Campos', objetivo: 'Desenvolvedor back end, api, banco de dados e integração.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe3 = await prisma.equipe.create({ data: { nome: 'Rafael Fahl', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Fabricação Mecânica', fotoURL: '' } });
+    const membroEquipe4 = await prisma.equipe.create({ data: { nome: 'Melissa Freitas', objetivo: 'Desenvolvedora front-end.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe5 = await prisma.equipe.create({ data: { nome: 'Felipe Gabriel', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Eletroeletrônica', fotoURL: '' } });
+    const membroEquipe6 = await prisma.equipe.create({ data: { nome: 'Gustavo Alves', objetivo: 'Desenvolvedor back end, api, banco de dados e integração.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe7 = await prisma.equipe.create({ data: { nome: 'Victor Barbosa', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Fabricação Mecânica', fotoURL: '' } });
+    const membroEquipe8 = await prisma.equipe.create({ data: { nome: 'Luana Folegatti', objetivo: 'Desenvolvedora front-end.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe9 = await prisma.equipe.create({ data: { nome: 'Heloísa Stefanini', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Eletroeletrônica', fotoURL: '' } });
+    const membroEquipe10 = await prisma.equipe.create({ data: { nome: 'Isabela Duetes', objetivo: 'Desenvolvedora front-end.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe11 = await prisma.equipe.create({ data: { nome: 'Maria Luiza', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Fabricação Mecânica', fotoURL: '' } });
+    const membroEquipe12 = await prisma.equipe.create({ data: { nome: 'Letícia Maria', objetivo: 'Desenvolvedora front-end.', curso: 'Desenvolvimento de Sistemas', fotoURL: '' } });
+    const membroEquipe13 = await prisma.equipe.create({ data: { nome: 'Ana Clara', objetivo: 'Responsabilidade sobre dados do livro, extrair informações para conter no site.', curso: 'Fabricação Mecânica', fotoURL: '' } });
 
     console.log('Iniciando seed do livro...');
     const livro = await prisma.livro.create({
@@ -169,28 +59,22 @@ async function main() {
             genero_pt: 'Romance regionalista',
             genero_en: 'Regionalist novel',
             ano: 1938,
-            movimento_pt:
-                '“Vidas Secas” é um dos principais livros da segunda fase modernista, a do regionalismo.',
-            movimento_en: '',
-            descricao_pt: '',
-            descricao_en: '',
-            enredo_pt: '',
-            enredo_en:
-                '',
-            contexto_historico_pt: '',
-            contexto_historico_en:
-                '',
-            detalhes_autor_pt:
-                'Nasceu em Alagoas (**1892 - 1953).** Figura central do Modernismo, o autor é famoso por obras como Vidas Secas (1938) e São Bernardo (1934)',
-            detalhes_autor_en:
-                'He was born in Alagoas (1892–1953). A central figure in Brazilian Modernism, the author is famous for having written works like Barren Lives (1938) and São Bernardo (1934).',
-            estilo_escrita_pt: 'Texto conciso e linguagem objetiva, direta, concisa e realista',
-            estilo_escrita_en: 'Concise, direct, and realistic language',
-            verossimilhanca_pt: '',
-            verossimilhanca_en: '',
-            caracteristicas_literarias_pt:
-                'Regionalismo: Narrativa focada na realidade, cultura e miséria do Nordeste brasileiro. Realismo Social: Denúncia das desigualdades econômicas, exploração do trabalhador e descaso político.',
-            caracteristicas_literarias_en: '',
+            movimento_pt: 'Segunda fase modernista (Regionalismo de 30)',
+            movimento_en: 'Second phase of Brazilian Modernism (Regionalism)',
+            descricao_pt: 'A obra Vidas Secas, de Graciliano Ramos, retrata a vida difícil de uma família de retirantes nordestinos que sofre com a seca, a fome e a pobreza. Fabiano, Sinhá Vitória, os filhos e a cachorra Baleia vivem em constante luta pela sobrevivência e enfrentam injustiças sociais. A obra critica a desigualdade e os sofrimentos causados pela seca no Nordeste brasileiro.',
+            descricao_en: 'The novel Vidas Secas (Barren Lives), by Graciliano Ramos, portrays the difficult life of a family of migrants from the Brazilian Northeast who suffer from drought, hunger, and poverty. Fabiano, Sinhá Vitória, their children, and their dog Baleia live in a constant struggle for survival and face social injustices. The work criticizes the inequality and suffering caused by drought in the Brazilian Northeast.',
+            enredo_pt: 'Temas de Redação:\n1° Desigualdade Social\n2° Falta de acesso à Educação e Direitos\n3° Exclusão Social\n4° Exploração do Trabalhador\n5° Seca e Problemas Climáticos',
+            enredo_en: 'Essay Topics:\n1. Social Inequality\n2. Lack of Access to Education and Rights\n3. Social Exclusion\n4. Worker Exploitation\n5. Drought and Climate Problems',
+            contexto_historico_pt: 'Repertório Coringa:\n- Desafios climáticos / Refugiados climáticos: A seca move a narrativa com a família fugindo da estiagem severa. Paralelo com temporais e enchentes atuais pela vulnerabilidade social dos mais pobres.\n- População infantil em situação de rua: Os filhos sem nome tipificam a raiz histórica da negligência estatal, privação absoluta e desestruturação familiar que empurram jovens para as ruas.',
+            contexto_historico_en: 'Dicas Vestibular 2026: 1. Crie um cronograma realista. 2. Leia o edital. 3. Estude em grupo. 4. Explore técnicas de estudo. 5. Consuma livros, filmes e jornais para repertório.',
+            detalhes_autor_pt: 'Graciliano Ramos',
+            detalhes_autor_en: 'Graciliano Ramos',
+            estilo_escrita_pt: 'Espírito de síntese, descrição não minuciosa do espaço, foco na tragédia social e desumanização.',
+            estilo_escrita_en: 'Focus on social tragedy, human objectification, and synthesis of descriptions.',
+            verossimilhanca_pt: 'Fontes de apoio: cnnbrasil.com.br',
+            verossimilhanca_en: 'Sources: cnnbrasil.com.br',
+            caracteristicas_literarias_pt: 'Mudez introspectiva, episódios independentes sem ligação cronológica rígida, análise psicológica sintonizada ao comportamento embrutecido.',
+            caracteristicas_literarias_en: 'Introspective muteness, semi-independent chapters, and psychological behavior deeply tied to environment.',
             conclusao_pt: '',
             conclusao_en: '',
             video_url: '',
@@ -199,203 +83,208 @@ async function main() {
     });
 
     console.log('Iniciando seed de personagens...');
-    const personagem1 = await prisma.personagem.create({
+    await prisma.personagem.create({
         data: {
             livro_id: livro.id,
             nome: 'Fabiano',
-            descricao_pt:
-                'Pai da família, vaqueiro rude e sofrido, que tenta sustentar a família no sertão',
-            descricao_en:
-                'The father, a ryde and suffered cowboy, who try to support his family in hinterland.',
-            papel: '',
+            descricao_pt: 'Pai da família, retirante e vaqueiro que se sente inferior e incapaz de se expressar bem.',
+            descricao_en: 'The father, a cowboy who feels inferior and unable to express himself well.',
+            papel: 'Principal',
             imagem_url: '',
         },
     });
 
-    const personagem2 = await prisma.personagem.create({
+    await prisma.personagem.create({
         data: {
             livro_id: livro.id,
             nome: 'Sinhá Vitória',
-            descricao_pt: 'Esposa de Fabiano, mais crítica e sonhadora; deseja uma vida melhor.',
-            descricao_en:
-                '  Fabiano’s wife, more critical and imaginative; she wishs for a better life.',
-            papel: '',
+            descricao_pt: 'Esposa de Fabiano, tenta melhorar a vida economizando e sonhando com mais conforto e estabilidade.',
+            descricao_en: 'Fabiano\'s wife, who tries to improve life by saving money and dreaming of comfort.',
+            papel: 'Principal',
             imagem_url: '',
         },
     });
-    const personagem3 = await prisma.personagem.create({
+
+    await prisma.personagem.create({
         data: {
             livro_id: livro.id,
             nome: 'Baleia',
-            descricao_pt: 'A cachorra, animal de estimação da família.',
-            descricao_en: 'The dog, it’s the family pet.',
-            papel: '',
+            descricao_pt: 'A cachorra da família. O capítulo dedicado a ela representa o sofrimento e os sentimentos de todos.',
+            descricao_en: 'The family dog. Her chapter represents the collective suffering of the family.',
+            papel: 'Principal',
             imagem_url: '',
         },
     });
-    const personagem4 = await prisma.personagem.create({
+
+    await prisma.personagem.create({
         data: {
             livro_id: livro.id,
             nome: 'Menino mais velho',
-            descricao_pt: 'Esposa de Fabiano, mais crítica e sonhadora; deseja uma vida melhor.',
-            descricao_en: 'Couple’s son, curious and fascinated by words.',
-            papel: '',
+            descricao_pt: 'Filho que cresce em privação absoluta, sem nome, brinquedos ou escola, demonstrando curiosidade fazendo perguntas.',
+            descricao_en: 'The older son, nameless, growing up in absolute deprivation, showing curiosity by asking questions.',
+            papel: 'Secundário',
             imagem_url: '',
         },
     });
-    const personagem5 = await prisma.personagem.create({
+
+    await prisma.personagem.create({
         data: {
             livro_id: livro.id,
             nome: 'Menino mais novo',
-            descricao_pt: 'Admira o pai e tenta imitá-lo.',
-            descricao_en: 'He looks up to his father and tries to copy him.',
-            papel: '',
+            descricao_pt: 'Filho mais novo, também sem nome, que compartilha da mesma rotina de invisibilidade e privação.',
+            descricao_en: 'The younger son, nameless, living under the same absolute structural neglect.',
+            papel: 'Secundário',
             imagem_url: '',
         },
     });
 
     console.log('Iniciando seed de curiosidades...');
-    const curiosidade1 = await prisma.curiosidade.create({
+    await prisma.curiosidade.create({
         data: {
             livro_id: livro.id,
             categoria_pt: Categoria.Curiosidades,
-            categoria_en: Categoria_en.Curiosities,
+            categoria_en: Categoria_en.Curities,
+            titulo_pt: 'Traduções Mundiais',
+            titulo_en: 'World Translations',
+            conteudo_pt: 'O livro “Vidas Secas” foi traduzido para mais de 20 idiomas diferentes e é considerado um clássico da literatura mundial.',
+            conteudo_en: 'The book “Barren Lives” has been translated for more than 20 different languages and is considered a classic of world literature.',
+        },
+    });
+
+    await prisma.curiosidade.create({
+        data: {
+            livro_id: livro.id,
+            categoria_pt: Categoria.Curiosidades,
+            categoria_en: Categoria_en.Curities,
             titulo_pt: 'Inspiração Real',
-            titulo_en: '',
-            conteudo_pt:
-                'Graciliano Ramos se inspirou em sua própria experiência de vida para escrever “Vidas Secas”, tendo nascido e crescido no sertão, onde a história se passa.',
-            conteudo_en: '',
+            titulo_en: 'Real Inspiration',
+            conteudo_pt: 'O cachorro Baleia (personagem do livro), foi inspirado em um cachorro real em que Graciliano Ramos teve em sua infância.',
+            conteudo_en: 'The character dog Baleia was inspired by a real dog that Graciliano Ramos had during his childhood.',
         },
     });
 
-    const curiosidade2 = await prisma.curiosidade.create({
-        data: {
-            livro_id: livro.id,
-            categoria_pt: Categoria.Curiosidades,
-            categoria_en: Categoria_en.Curiosities,
-            titulo_pt: 'Uso de Pseudônimos',
-            titulo_en: '',
-            conteudo_pt:
-                'Graciliano usava pseudônimos como Feliciano de Olivença, Soeiro Lobato, Soares de Almeida Cunha, Anastácio Anacleto e outros nas suas publicações em jornais e revistas.',
-            conteudo_en: '',
-        },
-    });
+    console.log('Iniciando seed de simulados (15 questões)...');
 
-    const curiosidade3 = await prisma.curiosidade.create({
+    // Questão Inicial Enviada (Exceção)
+    await prisma.simulado.create({
         data: {
             livro_id: livro.id,
-            categoria_pt: Categoria.Curiosidades,
-            categoria_en: Categoria_en.Curiosities,
-            titulo_pt: 'Premiação Internacional',
-            titulo_en: '',
-            conteudo_pt:
-                'Em 1962, Vidas Secas foi premiado pela fundação norte-americana William Faulkner como Livro Representativo da Literatura Brasileira Moderna.',
-            conteudo_en: '',
-        },
-    });
-
-    console.log('Iniciando seed de simulados (questões)...');
-    const questao1 = await prisma.simulado.create({
-        data: {
-            livro_id: livro.id,
-            pergunta_pt: 'No livro Vidas Secas, a linguagem seca e econômica utilizada por Graciliano Ramos contribui principalmente para:',
-            pergunta_en: 'In the book, Vidas Secas, the language used by Graciliano Ramos contributes mainly for',
-            opcao_a: 'romantizar a vida no sertão nordestino.',
-            opcao_b: ' enfatizar a dureza da existência das personagens.',
-            opcao_c: ' valorizar o humor presente na narrativa.',
-            opcao_d: ' destacar a superioridade intelectual dos retirantes.',
-            opcao_a_en: ' make life in the Northeast countryside look beautiful and perfect.',
-            opcao_b_en: ' show how hard the characters’ lives are.',
-            opcao_c_en: ' show the humor in the story.',
-            opcao_d_en: ' show that the migrants are very intelligent',
-            resposta_correta: 'b',
-            explicacao_pt: 'A linguagem direta, curta e “seca” combina com a miséria, a fome e o sofrimento vividos pelas personagens retratados no livro.',
-            explicacao_en: 'The direct language matches the misery, hunger, and suffering of the characters in the book.',
-        },
-    });
-
-    const questao2 = await prisma.simulado.create({
-        data: {
-            livro_id: livro.id,
-            pergunta_pt: '(FUVEST 2001) Um escritor classificou Vidas secas vista sua composição descontínua, feita de episódios relativamente independentes e sequências parcialmente truncadas. Essas características da composição do livro:',
+            pergunta_pt: 'Sobre a obra Vidas Secas, de Graciliano Ramos, todas as alternativas estão corretas, EXCETO:',
             pergunta_en: '',
-            opcao_a: ' Constituem um traço de estilo típico dos romances de Graciliano Ramos e do Regionalismo nordestino.',
-            opcao_b: ' Indicam que ele pertence à fase inicial de Graciliano Ramos, quando este ainda seguia os ditames do primeiro momento do Modernismo.',
-            opcao_c: ' Diminuem o seu alcance expressivo, na medida em que dificultam uma visão adequada da realidade sertaneja.',
-            opcao_d: ' Relacionam-se à visão limitada e fragmentária que as próprias personagens têm do mundo',
-            opcao_a_en: '',
-            opcao_b_en: '',
-            opcao_c_en: '',
-            opcao_d_en: '',
-            resposta_correta: 'd',
-            explicacao_pt: 'A estrutura fragmentada de Vidas Secas representa a visão limitada das personagens sobre o mundo, já que elas vivem em condições de miséria, pouca educação e dificuldade de compreensão da própria realidade.',
+            opcao_a: 'o romance focaliza uma família de retirantes, que vive numa espécie de mudez introspectiva, em precárias condições físicas e num degradante estado de condição humana',
+            opcao_b: 'o relato dos fatos e a análise psicológica dos personagens articulam-se com grande coesão ao longo da obra, colocando o narrador como decifrador dos comportamentos animalescos dos personagens',
+            opcao_c: 'o ambiente seco e retorcido da caatinga é como um personagem presente em todos os momentos, agindo de forma contínua sobre os seres vivos',
+            opcao_d: 'o narrador preocupa-se exclusivamente com a tragédia natural (a seca) e a descrição do espaço não é minuciosa; pelo contrário, revela o espírito de síntese do autor',
+            opcao_a_en: '', opcao_b_en: '', opcao_c_en: '', opcao_d_en: '',
+            resposta_correta: 'd', // Mapeado do 'e' original para caber no schema de 4 opções (A, B, C, D)
+            explicacao_pt: 'A alternativa está incorreta porque o livro não fala apenas da seca, mas também da miséria e da desumanização sofrida pela família retirante.',
             explicacao_en: '',
-        },
+        }
     });
 
-    const questao3 = await prisma.simulado.create({
-        data: {
-            livro_id: livro.id,
-            pergunta_pt: 'Sobre o foco narrativo em Vidas Secas, é correto afirmar que:',
-            pergunta_en: 'About the point of view/narrative focus, it is correct confirm that',
-            opcao_a: ' a narrative é feita exclusivamente em primeira pessoa por Fabiano.',
-            opcao_b: ' o narrador utiliza linguagem objetiva, mas penetra nos pensamentos das personagens.',
-            opcao_c: ' o narrador participa diretamente dos acontecimentos da história.',
-            opcao_d: ' a obra apresenta apenas diálogos, sem interferência narrativa.',
-            opcao_a_en: ' the story is told only by Fabiano in first person.',
-            opcao_b_en: ' the narrator uses simple language, but shows the characters’ thoughts.',
-            opcao_c_en: ' the narrator takes part in the story events.',
-            opcao_d_en: ' the book has only dialogues, without narration.',
-            resposta_correta: 'b',
-            explicacao_pt: 'O narrador é objetivo, mas utiliza discurso indireto livre para mostrar pensamentos das personagens.',
-            explicacao_en: 'The narrator is objective, but uses free indirect speech to show the characters’ thoughts.',
+    // 15 Questões Sequenciais Novas
+    const questoesNovas = [
+        {
+            p_pt: 'Como Fabiano se sente em relação à própria inteligência?',
+            a: 'Muito inteligente e confiante', b: 'Superior às outras pessoas', c: 'Inferior e incapaz de se expressar bem', d: 'Feliz com sua educação',
+            rc: 'c', exp: 'Fabiano se enxerga como um bicho, desprovido de vocabulário articulado e incapaz de se defender formalmente por falta de instrução.'
         },
-    });
+        {
+            p_pt: 'De que forma Sinhá Vitória tenta melhorar a vida da família?',
+            a: 'Gastando dinheiro com luxo', b: 'Economizando e sonhando com mais conforto', c: 'Mudando para a cidade grande', d: 'Vendendo todos os animais',
+            rc: 'b', exp: 'Sinhá Vitória foca suas aspirações em melhorias factíveis, como a cama de fita, buscando poupar o pouco que ganham.'
+        },
+        {
+            p_pt: 'O que o episódio do soldado amarelo revela sobre a sociedade da época?',
+            a: 'A igualdade entre as pessoas', b: 'O respeito pelos trabalhadores', c: 'A diversão dos sertanejos', d: 'O abuso de poder e a injustiça social',
+            rc: 'd', exp: 'Representa a opressão arbitrária das forças do Estado sobre o trabalhador desarmado e vulnerável.'
+        },
+        {
+            p_pt: 'Como a seca afeta os animais e as pessoas no livro?',
+            a: 'Traw fartura e tranquilidade', b: 'Faz todos enriquecerem', c: 'Provoca fome, sofrimento e luta pela sobrevivência', d: 'Não interfere na vida da família',
+            rc: 'c', exp: 'A estiagem desidrata o meio e desumaniza os personagens, reduzindo as interações à pura subsistência básica.'
+        },
+        {
+            p_pt: 'Por que Fabiano admira e ao mesmo tempo teme as autoridades?',
+            a: 'Porque acredita que elas têm poder sobre sua vida', b: 'Porque quer ser político', c: 'Porque conhece todas as leis', d: 'Porque deseja trabalhar na polícia',
+            rc: 'a', exp: 'O medo advém do desconhecimento das leis e da vulnerabilidade social perante os donos do poder e do dinheiro.'
+        },
+        {
+            p_pt: 'Como os meninos demonstram curiosidade sobre o mundo?',
+            a: 'Fazendo perguntas e observando tudo ao redor', b: 'Ignorando os acontecimentos', c: 'Brincando apenas com animais', d: 'Fugindo da família',
+            rc: 'a', exp: 'Apesar do ambiente hostil, as crianças tentam entender palavras novas (como "inferno") e o sentido das coisas ao redor.'
+        },
+        {
+            p_pt: 'Qual é a importância do capítulo “Baleia” para a história?',
+            a: 'Mostrar apenas a vida dos animais', b: 'Representar o sofrimento e os sentimentos da família', d: 'Explicar a economia do sertão', c: 'Contar uma história engraçada',
+            rc: 'b', exp: 'Baleia é humanizada no romance, possuindo sonhos e sentimentos que espelham o próprio martírio dos humanos que a cercam.'
+        },
+        {
+            p_pt: 'Como a família reage quando encontra uma fazenda para morar?',
+            a: 'Com esperança e alívio', b: 'Com tristeza e medo', c: 'Com indiferença', d: 'Com vontade de ir embora imediatamente',
+            rc: 'a', exp: 'A ocupação temporária da fazenda abandonada renova as forças e suspende o ciclo imediato de fuga da morte por fome.'
+        },
+        {
+            p_pt: 'O que o livro mostra sobre a falta de oportunidades no sertão?',
+            a: 'Que todos conseguem melhorar de vida facilmente', b: 'Que os pobres enfrentam dificuldades para mudar de condição', c: 'Que há muitas escolas e empregos', d: 'Que o sertão é desenvolvido',
+            rc: 'b', exp: 'A obra denuncia o determinismo social e geográfico em que o trabalhador fica preso à exploração sem caminhos de ascensão.'
+        },
+        {
+            p_pt: 'Como o silêncio entre os personagens ajuda a construir o clima da obra?',
+            a: 'Mostrando alegria constante', b: 'Criando humor nas cenas', c: 'Demonstrando distância, sofrimento e dificuldade de comunicação', d: 'Indicando festas e diversão',
+            rc: 'c', exp: 'A escassez de diálogos mimetiza a terra seca; os personagens se comunicam por grunhidos e gestos devido ao esvaziamento cultural.'
+        },
+        {
+            p_pt: 'Por que Fabiano se sente injustiçado em vários momentos da narrativa?',
+            a: 'Porque é rico e perde dinheiro', b: 'Porque sofre abusos e não consegue se defender', c: 'Porque não gosta de trabalhar', d: 'Porque deseja sair do sertão',
+            rc: 'b', exp: 'Ele percebe que as contas do patrão estão fraudadas, mas a falta de fala formal o força a aceitar a espoliação sob pena de demissão.'
+        },
+        {
+            p_pt: 'Como a esperança aparece mesmo diante das dificuldades da família?',
+            a: 'Nos sonhos de uma vida melhor', b: 'Na vontade de abandonar tudo', c: 'No desejo de viver sozinho', d: 'Na riqueza da fazenda',
+            rc: 'a', exp: 'Apesar de andarem em círculos, o final projeta a saída definitiva para o Sul, alimentando a busca utópica por dignidade.'
+        },
+        {
+            p_pt: 'De que maneira a linguagem simples do livro combina com a realidade dos personagens?',
+            a: 'Reflete a vida humilde e sofrida do sertão', b: 'Mostra personagens muito cultos', c: 'Torna a história confusa', d: 'Não tem relação com os personagens',
+            rc: 'a', exp: 'A escrita seca, crua e desprovida de adornos de Graciliano emula perfeitamente a escassez material do ambiente da Caatinga.'
+        },
+        {
+            p_pt: 'Como o ambiente do sertão interfere nas decisões da família?',
+            a: 'Obriga a família a migrar em busca de sobrevivência', b: 'Faz a família viajar por diversão', c: 'Incentiva estudos e lazer', d: 'Não influencia suas escolhas',
+            rc: 'a', exp: 'O clima árido dita o início e o fim da narrativa, agindo como força motriz implacável que expulsa os viventes de sua terra.'
+        },
+        {
+            p_pt: 'O que diferencia os sonhos de Fabiano e de Sinhá Vitória?',
+            a: 'Fabiano quer luxo e Sinhá Vitória quer pobreza', b: 'Fabiano pensa apenas no presente, enquanto Sinhá Vitória sonha com conforto e estabilidade', c: 'Os dois têm exatamente os mesmos objetivos', d: 'Sinhá Vitória não possui sonhos',
+            rc: 'b', exp: 'Fabiano foca na lida diária e no temor das intempéries inmediatas; Vitória consegue planejar à frente e almejar bens materiais tangíveis.'
+        }
+    ];
 
-    const questao4 = await prisma.simulado.create({
-        data: {
-            livro_id: livro.id,
-            pergunta_pt: 'Para as questões 4 e 5, considere o fragmento abaixo, extraído de Vidas secas, de Graciliano Ramos. O pequeno sentou-se, acomodou-se nas pernas a cabeça da cachorra, pôs-se a contar-lhe baixinho uma história. Tinha um vocabulário quase tão minguado como o do papagaio que morrera no tempo da seca. Valia-se, pois, de exclamações e de gestos, e Baleia respondeia com o rabo, com a língua, com movimentos fáceis de entender. (Graciliano Ramos. Vidas secas. Rio de Janeiro: Record, 2012, p. 57.) QUESTÃO 4 Uma definição possível de alteridade é “a capacidade de se colocar no lugar do outro”. No excerto, o menino mais velho, após ter recebido um cocorote de sinhá Vitória, ao lhe ter feito uma pergunta sobre a palavra “inferno”, conta uma história para Baleia. Da leitura desse trecho, podemos concluir que',
-            pergunta_en: '',
-            opcao_a: ' o narrador tem êxito na construção da alteridade, ao se colocar no lugar do menino e de Baleia e permitir a relação entre essas duas personagens.',
-            opcao_b: ' o vocabulário minguado do menino mais velho o impede de se relacionar com Baleia, o que demonstra que, sem linguagem, não há alteridade entre o homem e o mundo.',
-            opcao_c: ' o vocabulário minguado é próprio da infância e não resulta das condições sociais e materiais adversas das personagens.',
-            opcao_d: 'a resposta de Baleia reduz o menino mais velho à condição de bicho, privando-o dos atributos necessários para se tornar homem.',
-            opcao_a_en: '',
-            opcao_b_en: '',
-            opcao_c_en: '',
-            opcao_d_en: '',
-            resposta_correta: 'a',
-            explicacao_pt: 'O narrador consegue mostrar os sentimentos e a forma de comunicação tanto do menino quanto de Baleia. Mesmo com poucas palavras, os dois se entendem por gestos, sons e afeto. O narrador “entra” no universo dos dois personagens e faz o leitor compreender essa conexão.',
-            explicacao_en: '',
-        },
-    });
-
-    const questao5 = await prisma.simulado.create({
-        data: {
-            livro_id: livro.id,
-            pergunta_pt: 'Para as questões 4 e 5, considere o fragmento abaixo, extraído de Vidas secas, de Graciliano Ramos. O pequeno sentou-se, acomodou-se nas pernas a cabeça da cachorra, pôs-se a contar-lhe baixinho uma história. Tinha um vocabulário quase tão minguado como o do papagaio que morrera no tempo da seca. Valia-se, pois, de exclamações e de gestos, e Baleia respondeia com o rabo, com a língua, com movimentos fáceis de entender. (Graciliano Ramos. Vidas secas. Rio de Janeiro: Record, 2012, p. 57.) QUESTÃO 5 No romance Vidas secas, a alteridade é construída ficcionalmente. Isso porque o narrador',
-            pergunta_en: '',
-            opcao_a: ' impõe seu ponto de vista sobre a miséria social das personagens, desconsiderando a luta dessas personagens por uma vida mais digna.',
-            opcao_b: ' permite conhecer o ponto de vista de cada uma das personagens e manifesta um juízo crítico sobre o drama da miséria social e econômica.',
-            opcao_c: ' relativiza o universo social das personagens, uma vez que elas estão privadas da capacidade de comunicação.',
-            opcao_d: ' analisa os dilemas de todas as personagens e propõe, ao final da narrativa, uma solução para o drama da miséria social e econômica.',
-            opcao_a_en: '',
-            opcao_b_en: '',
-            opcao_c_en: '',
-            opcao_d_en: '',
-            resposta_correta: 'b',
-            explicacao_pt: 'O narrador de Vidas Secas mostra os pensamentos e sentimentos das personagens, inclusive de Baleia. Além disso, a obra faz uma forte crítica social à miséria, à seca e à desumanização dos retirantes.',
-            explicacao_en: '',
-        },
-    });
+    for (const q of questoesNovas) {
+        await prisma.simulado.create({
+            data: {
+                livro_id: livro.id,
+                pergunta_pt: q.p_pt,
+                pergunta_en: '',
+                opcao_a: q.a,
+                opcao_b: q.b,
+                opcao_c: q.c,
+                opcao_d: q.d,
+                opcao_a_en: '', opcao_b_en: '', opcao_c_en: '', opcao_d_en: '',
+                resposta_correta: q.rc,
+                explicacao_pt: q.exp,
+                explicacao_en: '',
+            }
+        });
+    }
 
     console.log('✅ Seed finalizado com sucesso!');
     console.log(`Usuários: ${user1.email}, ${user2.email}`);
-    console.log(`Membros da equipe criados: 2`);
+    console.log(`Membros da equipe criados: 13`);
     console.log(`Livro: ${livro.titulo} (ID: ${livro.id})`);
     console.log(`Curiosidades criadas: 2`);
-    console.log(`Questões criadas para este livro: 2`);
+    console.log(`Questões criadas para este livro: 16`);
 }
 
 main()
