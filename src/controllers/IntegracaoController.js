@@ -77,14 +77,14 @@ export const obterBibliotecaCompleta = async (req, res) => {
                         item.title ||
                         item.tituloDoLivro ||
                         item.tituloPT ||
+                        item.nome ||
                         'Título não informado',
                     autor:
                         item.autor ||
                         item.author ||
                         item.autores ||
-                        item.nome ||
                         'Autor não informado',
-                    capa_url: item.capa || item.image || item.capaURL || item.foto || null,
+                    capa_url: item.capa || item.image || item.capaURL || item.foto || item.capa_url|| null,
                     ano: item.ano || item.year || item.anoPublicacao || item.publicacao || 'N/A',
                     genero_pt:
                         item.genero_pt || item.genero || item.generoPT || 'Gênero não informado',
@@ -124,4 +124,3 @@ export const obterBibliotecaCompleta = async (req, res) => {
         return res.status(500).json({ erro: 'Erro crítico no servidor.', detalhe: error.message });
     }
 };
-
