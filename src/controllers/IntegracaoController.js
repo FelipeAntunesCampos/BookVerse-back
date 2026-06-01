@@ -101,6 +101,7 @@ export const obterBibliotecaCompleta = async (req, res) => {
                 }));
 
                 return {
+                    //adicionando o id p cada livro
                     id: ++contadorGlobal,
                     livro: livro.nomeLivro,
                     statusApi: 'Online',
