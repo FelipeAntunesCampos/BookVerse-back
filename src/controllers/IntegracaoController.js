@@ -30,6 +30,8 @@ export const obterBibliotecaCompleta = async (req, res) => {
 
         console.log(`Total de livros cadastrados no array: ${endpointsLivros.length}`);
 
+        let contadorGlobal = 0;
+
         const promessas = endpointsLivros.map(async (livro, index) => {
             console.log(`[Índice ${index}] Iniciando processo para: ${livro.nomeLivro}`);
 
@@ -71,6 +73,8 @@ export const obterBibliotecaCompleta = async (req, res) => {
 
 
                 const dadosFormatados = listaDeLivros.map((item) => ({
+
+                    id: ++contadorGlobal,
 
                     titulo:
                         item.titulo ||
